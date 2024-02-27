@@ -55,7 +55,7 @@ void UnitPlayer () {
     }
 
 } //the unit test for player
-
+/*
 void UnitColumn () {
     const string colstates[3] = {"Available", "Pending", "Captured"};
     Column creation1(2);
@@ -74,8 +74,23 @@ void UnitColumn () {
     creation2.stop(&playing);
     cout << colstates[creation2.getState()];
     creation2.print(cout);
+    */
 } //the unit test for column
-
+void unitTest(){
+    Board Play;
+    ostream& print(ostream& boardOutput);
+    void startTurn(Player*);
+    bool move(int column);
+    void stop();
+    void bust();
+}
+ int main() {
+    // UnitDice();
+    // bye();
+    //UnitPlayer();
+       unitTest();
+    return 0;
+}
 void testGame(Game& games) {
 games.unitTest();
 } //the unit test for game
