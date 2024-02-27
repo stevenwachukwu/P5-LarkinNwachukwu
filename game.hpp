@@ -12,9 +12,10 @@ class Game {
 private:
     Dice* dices;
     Player player1;
-    Player player2;
-    Column column1;
-    Column column2;
+//  Player player2;
+//  Column column1;
+//  Column column2;
+    Board Play;
 
 public:
     Game(); //the constructor for game
