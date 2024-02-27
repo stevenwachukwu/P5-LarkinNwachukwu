@@ -33,9 +33,9 @@ void Game::getNewPlayer() {
             cout << "Color input accepted!" << endl;
         }
     }
-    player2 = Player(playerName, (ECcolor)index); //calling the Player constructor
+//    player2 = Player(playerName, (ECcolor)index); //calling the Player constructor
 }
-
+/*
 void Game::unitTest() {
 dices->roll();
 cout << *dices << endl;
@@ -50,3 +50,4 @@ column1.move();
 column1.move();
 cout << column1 << endl;
 } //the unit test utilized for game
+*/
