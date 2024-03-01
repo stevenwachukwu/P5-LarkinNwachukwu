@@ -3,6 +3,7 @@
 
 Column::Column(int columnNum):columnNum(columnNum) {TowerMarker = -1;}
 
+
 Column::~Column(){}
 
 int Column::getState() {
@@ -71,4 +72,6 @@ void Column::stop(Player * player) {
         }
 return columnOutput;
     }
+
+
 
