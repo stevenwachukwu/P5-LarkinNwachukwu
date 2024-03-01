@@ -7,14 +7,15 @@
 #include "dice.hpp"
 #include "column.hpp"
 #include "player.hpp"
+#include "board.hpp"
 
 class Game {
 private:
     Dice* dices;
     Player player1;
-//  Player player2;
-//  Column column1;
-//  Column column2;
+    //Player player2;
+    Column column1;
+    Column column2;
     Board Play;
 
 public:
