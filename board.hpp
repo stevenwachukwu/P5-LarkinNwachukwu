@@ -5,7 +5,7 @@
 
 class Board {
 private:
-    int towerCounter;
+    int towerCounter = 0;
     int towerDetector[3];
     Column* backBone [13];
     Player* currentPlayer;
@@ -18,6 +18,6 @@ public:
     bool move(int column);
     void stop();
     void bust();
-
 };
+inline ostream& operator << (ostream& output, Board& b) {return b.print(output);}
 #endif
