@@ -1,14 +1,30 @@
 /*Written by Steve Nwachukwu and Nick Larkin*/
 #include "board.hpp"
-Board::Board() {} //the constructor for board
+Board::Board() {
+towerDetector[0] = 0;
+towerDetector[1] = 0;
+towerDetector[2] = 0;
 
-Board::~Board(){}  //the destructor for board
+for (int i = 2; i < 13; i++) {
+    backBone[i] = new Column(i);
+}
+
+} //the constructor for board
+
+Board::~Board(){
+for (int i =2; i <13; i++) {
+    delete backBone[i];
+}
+
+}  //this board destructor helps deal with dynamic allocation
 
 ostream& Board::print (ostream& boardOutput) {
-   for (int k = 0; k < 13; k++) {
-       boardOutput << backBone[13] << "|";
+   for (int k = 2; k < 13; k++) {
+       boardOutput << *backBone[k] << "| " << endl;
    }
-   boardOutput << currentPlayer;
+   if (currentPlayer != nullptr) {
+       boardOutput << *currentPlayer;
+   }
    return boardOutput;
 }
 
