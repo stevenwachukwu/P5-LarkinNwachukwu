@@ -2,15 +2,13 @@
 
 #include "game.hpp"
 
-Game::Game():column1(2),column2(7), dices(new Dice (4)){
-getNewPlayer();
-} //constructor for game
+Game::Game():column1(2),column2(7), dices(new Dice (4)){getNewPlayer();} //constructor for game
 
 Game::~Game() {delete dices;} //destructor for game
 
 void Game::getNewPlayer() {
-   string playerName;
-   string color;
+    string playerName;
+    string color;
     cout << "Enter in the player 1's name:\n" << endl;
     cin >> playerName;
     cout << "Enter in the player 1's color:\n" << endl;
@@ -35,12 +33,12 @@ void Game::getNewPlayer() {
     }
 //    player2 = Player(playerName, (ECcolor)index); //calling the Player constructor
 }
-/*
+
 void Game::unitTest() {
 dices->roll();
 cout << *dices << endl;
 cout << player1 << endl;
-cout << player2 << endl;
+//cout << player2 << endl;
 column2.startTower(&player1);
 cout << column1 << endl;
 cout << column2 << endl;
@@ -49,5 +47,6 @@ column1.move();
 column1.move();
 column1.move();
 cout << column1 << endl;
+Board play;
 } //the unit test utilized for game
-*/
+
