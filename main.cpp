@@ -14,13 +14,15 @@ void UnitDice();
 void UnitPlayer();
 void UnitColumn();
 void testGame(Game&);
+void unitBoard();
 //-----------------------------------------------
 int main() {
     //UnitDice();
     //UnitPlayer();
     //UnitColumn();
+    unitBoard();
     Game gameclass;
-    testGame(gameclass);
+    //testGame(gameclass);
     bye();
     return 0;
 }
@@ -74,24 +76,19 @@ void UnitColumn () {
     creation2.stop(&playing);
     cout << colstates[creation2.getState()];
     creation2.print(cout);
-    */
-} //the unit test for column
-void unitTest(){
-    Board Play;
-    ostream& print(ostream& boardOutput);
-    void startTurn(Player*);
-    bool move(int column);
-    void stop();
-    void bust();
-}
- int main() {
-    // UnitDice();
-    // bye();
-    //UnitPlayer();
-       unitTest();
-    return 0;
-}
-void testGame(Game& games) {
-games.unitTest();
-} //the unit test for game
 
+} //the unit test for column */
+void unitBoard(){
+    Board Play;
+    //cout << Play;
+    Player playing ("John", ECcolor::blue);
+    Play.startTurn(&playing);
+    Play.move(6);
+    cout << Play;
+    Play.stop();
+    Play.bust();
+}
+
+void testGame(Game& games) {
+    games.unitTest();
+} //the unit test for game
